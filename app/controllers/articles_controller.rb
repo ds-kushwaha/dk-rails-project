@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
 	def mynew
+		#new keyword for creating new object
 		@article = Article.new
 	end
 
