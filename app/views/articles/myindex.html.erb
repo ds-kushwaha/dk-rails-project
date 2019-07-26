@@ -1,0 +1,23 @@
+
+<h1>Listing articles</h1>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @myallarticle.each do |ar| %>
+    <tr>
+      <td><%= ar.title %></td>
+      <td><%= ar.text %></td>
+      <td><%= link_to 'Show', my_s_article_path(ar) %></td>
+      <td><%= link_to 'Edit', my_e_article_path(ar) %></td>
+      <td><%= link_to 'Delete', my_d_article_path(ar) ,
+              method: :delete,
+              data: { confirm: 'Are you sure?'} %></td>
+
+    </tr>
+  <% end %>
+</table>
+
